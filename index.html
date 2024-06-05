@@ -7,7 +7,6 @@
      <!--=================Link css===================-->
      <link rel="stylesheet" href="./components/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="./components/css/style.css">
-     <link rel="stylesheet" href="./components/css/responsive.css">
      <!--=================Link icon===================-->
      <link rel="stylesheet" href="./components/bootstrap/icons/bootstrap-icons.min.css">
 </head>
@@ -21,7 +20,7 @@
               <div id="div-header" class="">
                   <!--============Logo=================--> 
                   <div class="logo   col-md-2">
-                    <h1 style=" font-size: 2.5rem;">Mercado <br> <span class="bi-cart4"></span> Livre</h1>
+                    <h1 style=" font-size: 2.5rem;">Store <br> <img src="./components/img/le1.png" alt="" id="logo"> Tennis</h1>
                   </div>
         
                   <!--==============navbar==========-->
@@ -35,11 +34,11 @@
                       </ul>
                       <a href="login.html"><button type="submit" class="btn">Entrar</button></a>
                     </nav><!--========navbar==========-->
-                    <div class="carrinho">
+                    <div class="carrinho" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >
                       <i class="bi-cart3"></i>
-                      <span class="cont-icon">3</span>
+                      <span class="cont-icon" id="count">0</span>
                     </div>
-                  <!--==============navbar toogle==========-->
+                    <!--==============navbar toogle==========-->
                   <nav id="navbar-dropdow" class="navbar d-md-none">
                     <ul>
                       <li><a class="nav-link active" href="#home">Home</a></li>
@@ -50,7 +49,7 @@
                     </ul>
                     <a href="./auto-pages/login.html"><button type="submit" class="btn">Entrar</button></a>
                   </nav><!--========navbar==========-->
-                  <div class="toogle-btn d-block d-md-none"><i class="bi-list"></i></div>
+                  <div class="toogle-btn d-block d-md-none" ><i class="bi-list"></i></div>
                 </div>
             </div>
         </header><!-- End Header -->
@@ -61,10 +60,10 @@
                   <div class="wrapper">
                     <h1 class="content">
                       Bem-vindo à Sua Loja de Tênis
-                      <ol>
-                        <li><span>Comece sua jornada com os melhores tênis do mundo.</span></li>
-                        <li><span>Compre agora e sinta a diferença!</span></li>
-                      </ol>
+                      <div class="container" id="animacao">
+                        <div class="texto" id="text1">primeiro texto</div>
+                        <div class="texto" id="text2">segundo texto</div>
+                    </div>
                     </h1>
                   </div>
                 </div>
@@ -174,13 +173,28 @@
 
         <!--==============PRODUTOS==========-->
         <section class="container-fluid" id="produtos">
-          <div class="cardtTab">
-            
-          </div>
-          <div class="tennis">
-            <div class="card">
-              
+
+          <div class="offcanvas offcanvas-end px-3" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title" id="offcanvasRightLabel">Compras </h3>
+              <button type="button" class="btn-close w-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body">
+              <div class="slider">
+                <div id="cartItem"></div>
+                <div class="foot">
+                  <h3>Total</h3>
+                  <h4 id="total"> </h4>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="container-fluid">
+             <div class="row gap-5 justify-content-center d-flex align-items-center">
+                <div id="root">
+                </div>
+             </div>   
           </div>
         </section>
       </div>

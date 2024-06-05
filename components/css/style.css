@@ -50,6 +50,10 @@ header{
         margin:auto
     }
 
+    #logo{
+        height: 37px;
+    }
+
     div#div-header{
         display: flex;
         align-items: center;
@@ -153,27 +157,10 @@ header{
 
 /*===============Animate text===============*/
 
-.wrapper{
-    position: absolute;
-    top: 20%;
-    color: white;
-    padding: 2rem;
-}
 
-.wrapper .content{
-    font:lighter 3rem "Poppins", sans-serif;
-}
 
-.wrapper .content ol{
-    list-style: none;
-    --height: 3.8rem;
-    height: var(--height);
-    line-height: var(--height);
-    overflow: hidden;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-}
+
+
 
 .wrapper .content ol li span{
     font-weight: 600;
@@ -232,47 +219,6 @@ header{
     
 }
 
-/*===============Slider Img===============*/
-
-.slider{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    animation: rotate 30s linear infinite;
-}
-
-@keyframes rotate {
-    0%{
-        transform: perspective(1000px) rotateY(0deg);
-    }
-
-    100%{
-        transform: perspective(1000px) rotateY(360deg);
-    }
-}
-
-.slider span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
-}
-
-.slider span img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    object-fit: cover;
-    transition: 2s;
-}
 
 /*===============Sobre nós===============*/
 
@@ -368,31 +314,141 @@ section#sobre {
 
 /*===============Sobre nós===============*/
 section#produtos{
-    
-    background: black;
-    height: 70vh;
+    padding: 60px;
     position: absolute;
     top: 195%;
+    background: linear-gradient(20deg, #A12626, #550BEC);
     
 
-    cardtTab{
-        background-color: black;
-        opacity: 0.5;
-        color: white;
-        width: 400px;
+    .offcanvas-body{
+
+
+       .foot{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+        padding: 10px 0px;
+        border-top: 1px solid #333;
+       }
+
+    }
+
+    div#root {
+        display: contents;
+        width: 100%;
+    }
+
+    .card {
+        display: inline-grid;
+        align-items: center;
+        border-radius: 25px;
+        padding: 20px 30px 30px 30px;
+        max-width: 300px;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .img-card{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .images{
         max-width: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: grid;
-        grid-template-rows: 70px 1fr 70px;
+        max-height: 100%;
+        transform: translateY(-13px);
+        object-fit: cover;
+        object-position: center;
+    }
 
+    .logo{
+        width: 60px;
+    }
 
-        cardtTab h1{
-            padding: 20px;
-            margin: 0;
-            font-weight: 300;
-        }
+    .bottom{
+        margin-top: 20px;
+        width: 100%;
+        height: 110px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h5{
+        font-size: 20px ;
+    }
+
+    button.add{
+        width:100% ;
+        position: relative;
+        border: none;
+        border-radius: 5px;
+        padding: 7px 25px;
+        cursor: pointer;
+        transition: 1s;
+        color: white;
+        background: linear-gradient(20deg, #A12626, #550BEC);
+    }
+
+    button.add:hover{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+        border-radius: 5px;
+        margin: 10px 10px;
+    }
+
+    
+
+    .row-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .rowimg{
+        max-width: 43px;
+        max-height: 43px;
+        border-radius: 50px;
+    }
+
+    i.bi.bi-trash3 {
+        background: linear-gradient(20deg, #A12626, #550BEC);
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 20px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 1s;
+    }
+
+    i.bi.bi-trash3:hover{
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    .bi-trash3::before {
+        color: white;
+        line-height: 1.7;
     }
 }
