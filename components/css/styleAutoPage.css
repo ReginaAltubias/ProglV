@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Satisfy&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+div#login {
+    background: black;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    main{
+        border:1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 35.666667%;
+    }
+
+    form{
+        border:1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+        border-radius: 20px;
+        width: 90%!important;
+
+        h1{
+            font-weight: 600;
+            -webkit-text-fill-color:transparent;
+            background: linear-gradient(20deg, #A12626, #550BEC);
+            -webkit-background-clip: text;
+            -webkit-space:nowrap;
+        }
+        .input-section.col-md-9 {
+            gap: 20px;
+            display: grid;
+        }
+
+        input.form-control {
+            background-color: transparent;
+            height: 48px;
+            color: white;
+            padding-left: 45px;
+        }
+
+
+        .form-control:focus{
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        .form-check-input:checked {
+            background: linear-gradient(20deg, #A12626, #550BEC);
+            background-color: white;
+            color: white;
+        }
+
+        i{
+            font-size: 35px;
+            color: white;
+            position: absolute;
+            -webkit-text-fill-color:transparent;
+            background: linear-gradient(20deg, #A12626, #550BEC);
+            -webkit-background-clip: text;
+            -webkit-space:nowrap;
+        }
+
+        i.bi-envelope-fill {
+            transform: translate(10px, 40px);
+            font-size: 32px;
+            }
+
+        i.bi-lock-fill {
+            transform: translate(6px, 40px);
+           
+        }
+
+        i.bi-person-fill{
+            transform: translate(10px, 40px);
+        }
+
+        label{
+            color: white;
+        }
+
+        #loginButton{
+            width: 75%;
+            color: white;
+            font-size: 1rem;
+            transition: 1s;
+            background: linear-gradient(315deg, #A12626, #550BEC);
+        }
+
+        #loginButton:hover, 
+        #loginButton:focus, 
+        #loginButton:active{
+            border: none;
+            transition: 1s;
+            transform: scale(1.1);
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            padding: 0px 25px 10px 0;
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+}
+
+/*===================Borda animada=======================*/
+ form a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(315deg, #A12626, #550BEC);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+
+}
+form a:hover::after{ 
+    width: 100%;
+}
+
+/*=======================Mobile=======================*/
+@media (max-width: 768px) {
+    
+    main{
+        
+        width: 95.666667% !important;
+    }
+}
+
+/*=======================Tablet=======================*/
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+
+    main{
+        
+        width: 70.666667% !important;
+    }
+    
+}

@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Satisfy&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    height: 500vh;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    
+    
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    -webkit-text-fill-color:transparent;
+    background: linear-gradient(20deg, #A12626, #550BEC);
+    -webkit-background-clip: text;
+    -webkit-space:nowrap;
+}
+
+/*====================navabar=================*/
+
+header.rolagem {
+    background: #000000d4;
+    padding: 25px 0% 0% 0%;
+    transition: 1s;
+}
+
+header{
+    width: 100%;
+    padding: 60px 0% 4% 0px;
+    position: fixed;
+    top: 0;
+    z-index: 997;
+    left: 0;
+    transition: 1s;
+
+    
+    .container{
+        max-width: 1200px;
+        margin:auto
+    }
+
+    div#div-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+
+    ul{
+        list-style-type: none;
+        margin-bottom: 0;
+        line-height: 40px;
+        display: flex;
+    }
+
+    ul li{
+        display: inline;
+        margin: 0 15px;
+    }
+
+    ul li a{
+        color: white!important;
+        text-decoration: none;
+        padding: 0px 25px 5px 0!important;
+        position: relative;
+        font-size: 13pt!important;
+        cursor: pointer;
+    }
+
+    /*===================Borda animada=======================*/
+    ul li a::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(315deg, #A12626, #550BEC);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+
+}
+    ul li a:hover::after{ 
+    width: 100%;
+}
+
+    a:hover {
+        color: white !important;
+    }
+
+    button.btn {
+        background: linear-gradient(20deg, #A12626, #550BEC);
+        color: white;
+        border: none;
+        transition: 1s;
+        padding: 5px 35px;
+    }
+
+    i.bi-cart3 {
+        -webkit-text-fill-color:transparent;
+        background: linear-gradient(20deg, #A12626, #550BEC);
+        -webkit-background-clip: text;
+        -webkit-space:nowrap;
+        font-size: 2.1rem;
+    }
+
+    .cont-icon {
+        border-radius: 50px;
+        position: absolute;
+        background-color: white;
+        color: black;
+        right: 120px;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        transform: translateY(24px);
+    }
+
+    button.btn:hover, button.btn:focus{
+        background: linear-gradient(20deg, #A12626, #550BEC);
+        color: white;
+        border: none;
+        transform: scale(1.1);
+    }
+}
+
+/*===============Imagagem Fundo===============*/
+.image-fundo{
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+    height: 100vh;
+    
+}
+
+.opacidade{
+    background: black;
+    height: 100vh;
+    opacity: 0.9;
+}
+
+/*===============Animate text===============*/
+
+.wrapper{
+    position: absolute;
+    top: 20%;
+    color: white;
+    padding: 2rem;
+}
+
+.wrapper .content{
+    font:lighter 3rem "Poppins", sans-serif;
+}
+
+.wrapper .content ol{
+    list-style: none;
+    --height: 3.8rem;
+    height: var(--height);
+    line-height: var(--height);
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.wrapper .content ol li span{
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(20deg, #A12626, #550BEC);
+    -webkit-background-clip: text;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: .4rem solid #ffff;
+    animation: cursor .8s step-end infinite, typing 3s steps(20) infinite alternate;
+
+}
+
+.wrapper .content ol li{
+    animation: slide calc(2*1*0s) steps(2) infinite;
+}
+
+.wrapper .content ol li{
+    animation: slider-up 25s infinite;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+@keyframes typing {
+    0%,10%{
+        width: 0%;
+    }
+
+    70%,100% {
+        width: 101%;
+    }
+}
+
+
+
+@keyframes slide {
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes slider-up {
+
+    0%,10%{
+        transform: translateY(20%);
+    }
+    
+
+    70%,100%{
+        transform: translateY(-500%);
+    }
+
+    
+    
+}
+
+/*===============Slider Img===============*/
+
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+/*===============Sobre nós===============*/
+
+section#sobre {
+    position: absolute;
+    top: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    .row{
+        display: contents;
+
+
+        p {
+            font-size: 1.2rem;
+            color: black;
+            line-height: 30px;
+            text-align: justify;
+            text-indent: 50px
+        }
+
+        /*===============Card===============*/
+
+        .card{
+            position: relative;
+            width: 290px;
+            height: 310px;
+            perspective:1000px ;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 0;
+        }
+
+        .card-inner{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover  .card-inner{
+            transform: rotateY(-180deg);
+        }
+
+        .card-front{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border-radius: 2%;
+            backface-visibility: hidden;
+            background: linear-gradient(20deg, #A12626, #550BEC);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            h2{
+                background: transparent;
+                -webkit-text-fill-color: white;
+            }
+        }
+
+        .card-back{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: white;
+            color: black;
+            border-radius: 5%;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+
+            span.text p{
+                word-wrap: break-word;
+                text-align: center;
+                text-indent: 20px;
+            }
+        }
+    }
+
+    
+}
+
+/*===============Sobre nós===============*/
+section#produtos{
+    
+    background: black;
+    height: 70vh;
+    position: absolute;
+    top: 195%;
+    
+
+    cardtTab{
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        width: 400px;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+
+
+        cardtTab h1{
+            padding: 20px;
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+}
