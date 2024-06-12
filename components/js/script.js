@@ -35,7 +35,7 @@ const produtos = [
 
     {
         id: 3,
-        imagem: 'components/img/img1.png',
+        imagem: 'components/img/nike5.png',
         imglogo:'components/img/logonike.png',
         titulo: 'Adidas' ,
         preco: 5000
@@ -43,7 +43,7 @@ const produtos = [
 
     {
         id: 4,
-        imagem: 'components/img/img4.png',
+        imagem: 'components/img/nike2.png',
         imglogo:'components/img/logoadidas.png',
         titulo: 'Adidas' ,
         preco: 5000
@@ -51,7 +51,7 @@ const produtos = [
 
     {
         id: 5,
-        imagem: 'components/img/img5.png',
+        imagem: 'components/img/img8.png',
         imglogo:'components/img/logoadidas.png',
         titulo: 'Adidas' ,
         preco: 5000
@@ -59,7 +59,7 @@ const produtos = [
 
     {
         id: 6,
-        imagem: 'components/img/img5.png',
+        imagem: 'components/img/img9.png',
         imglogo:'components/img/logoadidas.png',
         titulo: 'Adidas' ,
         preco: 5000
@@ -67,12 +67,14 @@ const produtos = [
 
     {
         id: 7,
-        imagem: 'components/img/img5.png',
+        imagem: 'components/img/img9.png',
         imglogo:'components/img/logoadidas.png',
         titulo: 'Adidas' ,
         preco: 5000
     }
 ];
+
+/* ================Adicionar Imagem ao card ===================== */
 
 const categorias = [...new Set(produtos.map((item)=>
     {return item}))]
@@ -82,32 +84,37 @@ document.getElementById('root').innerHTML = categorias.map((item)=>
     var {imagem, titulo, preco, imglogo} = item;
     return(
         `<div class='card '>
-            <div class='img-card col-md-3 flex-colum d-grid'>
-                <img class= 'logo' src=${imglogo}></img>
-                <img class= 'images' src=${imagem}></img>
+            <div class='card-inner'>
+                <div class='front'>
+                    <div class='img-card col-md-3 flex-colum d-grid'>
+                        <img class= 'logo' src=${imglogo}></img>
+                        <img class= 'images' src=${imagem}></img>
+                    </div>
+                    <div class='bottom'>
+                        <p>${titulo}</p>
+                        <h5>AOA ${preco}.00</h5>` +
+                        "<button class='add' onclick ='addnocar("+(i++)+")'>Adicionar ao carrinho </button>" +
+                    `</div>
+                </div>
+                <div class='back'></div>
             </div>
-            <div class='bottom'>
-                <p>${titulo}</p>
-                <h5>AOA ${preco}.00</h5>` +
-                "<button class='add' onclick ='addnocar("+(i++)+")'>Adicionar ao carrinho </button>" +
-            `</div>
         </div>`
     )
 }).join('')
 
 
 var cart = [];
-
+/* ================Adicionar compra ao carrinho ===================== */
 function addnocar(a){
     cart.push({...categorias[a]});
     displaycart();
 }
-
+/* ================Eliminar compra do carrinho ===================== */
 function delElement(a){
     cart.splice(a, 1);
     displaycart();
 }
-
+/* ================Funcao min do carrinho ===================== */
 function displaycart(a){
     let j = 0, total=0;
     document.getElementById("count").innerHTML = cart.length;

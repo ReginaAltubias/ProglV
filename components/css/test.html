@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/*    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-front {
+    background-color: #007bff;
+}
+
+.card-back {
+    background-color: #28a745;
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.typing-container {
+    position: relative;
+    width: 18ch; /* Adjust to fit your longest text */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.text-1, .text-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    animation: typing 4s steps(18), blink-caret 0.75s step-end infinite;
+}
+
+.text-2 {
+    animation: typing2 4s steps(18) 4s infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes typing2 {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+
+
+</style>
+<body>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-front">
+                Frente do Card
+            </div>
+            <div class="card-back">
+                Parte de Trás do Card
+            </div>
+        </div>
+    </div>
+
+    <div class="typing-container">
+       
+        <span class="text-2">Segundo Texto</span>
+        <span class="text-1">Segundo Texto</span>
+    </div>
+
+    <script >
+        document.getElementById('card').addEventListener('click', function() {
+    this.classList.toggle('flipped');
+    
+});
+
+    </script>
+</body>
+</html>
+<div class="dados">
+    <div class="col-md-4">
+      <span class="d-inline-flex gap-4">
+        <i class="bi-geo-alt"></i>
+        <span class="text">
+          <p class="m-0">Endereço</p>
+          <p style="font-size: 11pt;color: #9E9E9E;font-weight: 200;">Mainga (Luanda)</p>
+        </span>
+      </span>
+    </div>
+    <div class="col-md-4">
+      <span class="d-inline-flex gap-4">
+        <i class="bi-clock fs-4"></i>
+        <span class="text">
+          <p class="m-0">Horário</p>
+          <p style="font-size: 11pt;color: #9E9E9E;font-weight: 200;">Segunda - Domingo
+          <br>
+          8:00 AM - 23:00 PM
+          </p>
+        </span>
+      </span>
+    </div>
+    <div class="col-md-4">
+      <span class="d-inline-flex gap-4">
+        <i class="bi-envelope fs-4"></i>
+        <span class="text">
+          <p class="m-0">Email</p>
+          <p style="font-size: 11pt;color: #9E9E9E;font-weight: 200;">mercadolivre@gmail.com</p>
+        </span>
+      </span>
+    </div>
+    <div class="col-md-4">
+      <span class="d-inline-flex gap-4">
+        <i class="bi-phone"></i>
+        <span class="text">
+          <p class="m-0">Telefone</p>
+          <p style="font-size: 11pt;color: #9E9E9E;font-weight: 200;">+244 929 000 000 <br> +244 954 000 000</p>
+        </span>
+      </span>
+    </div>
+  </div>
+  <form action="">
+  <div class="row mb-3">
+    <div class="col-md-6 col-12 mb-md-0 mb-2"><input type="text" name="" id="" class="form-control" placeholder="Nome"></div>
+    <div class="col-md-6 col-12"><input type="email" name="" id="" class="form-control " placeholder="Email"></div>
+  </div>
+  <div class="row gap-3 px-2">
+    <input type="text" name="" id="" class=" form-control col-12" placeholder="Assunto">
+    <textarea name="" id="" class="form-control col-12"placeholder="Sua mensagem"></textarea>
+
+    <button type="submit" class="btn mt-3"> Enviar</button>
+  </div>
+  </form>
