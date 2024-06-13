@@ -674,7 +674,7 @@ footer {
 
 
  /**************** For mobile phones: *********************/
-@media screen and (min-width: 50px) and (max-width:992px){
+ @media only screen and (max-width: 480px) {
 
 
     #navbar-dropdow.open{
@@ -695,6 +695,8 @@ footer {
     header{
 
         div.logo{
+            width: 40% !important;
+
             h1{
                 font-size: 2rem!important;
             }
@@ -841,3 +843,188 @@ footer {
         padding: 15px 0px 0px 40px;
     }
 }
+
+
+ /**************** For tablet: *********************/
+ @media only screen and (min-width: 481px) and (max-width: 1024px){
+
+  #navbar-dropdow.open{
+        display: block!important;
+    }
+
+    .toogle-btn.d-block.d-md-none {
+        display: block !important;
+    }
+
+    header {
+        width: 100%;
+        padding: 40px 0% 4% 15px;
+    } 
+
+    header.rolagem {
+        background: #0000009c;
+        padding: 10px 0% 0% 0%;
+        transition: 1s;
+    }
+
+    header{
+
+        div.logo{
+            width: 40% !important;
+
+            h1{
+                font-size: 2rem!important;
+            }
+
+            #logo {
+                height: 26px;
+            }
+        }
+
+        div#div-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+            
+        .navbar{
+            display: none;
+        }
+
+
+        .toogle-btn i{
+            color: white;
+            font-size: 2rem;
+        }
+
+        #navbar-dropdow {
+            display: none;
+            position: absolute;
+            right: 10px;
+            padding: 30px;
+            background-color: transparent;
+            text-align: left;
+            top: 120px;
+            backdrop-filter: blur(170px);
+            opacity: 0.9;
+            border-radius: 15px;
+            transition: 1s;
+        
+
+            ul{
+                flex-direction: column;
+                padding: 0;
+            }
+
+            ul li{
+                display: grid;
+                margin: 0 15px;
+
+
+                a{
+                    color: white!important;
+                }
+            }
+
+            button.btn {
+                margin-top: 16px;
+            }
+
+           
+            
+        }
+    }
+
+
+
+
+    .cont-icon {
+        right: 100px!important;
+        width: 25px!important;
+        height: 25px!important;
+        line-height: 25px!important;
+        transform: translateY(29px)!important;
+    }
+
+    section#sobre {
+       height: auto!important;
+       margin-top: 30px;
+    }
+    section#produtos {
+        top: 400%;
+    }
+
+
+    section#promocoes {
+        margin-top: 85px;
+        height: auto;
+        opacity: 1;
+        box-shadow: 0 20px 25px #00000057;
+
+
+        #img-promocao .col-md-6{
+            padding: 0!important;
+
+
+            img.d-block {
+                width: 100%;
+            }
+        }
+
+        .col-md-6 {
+            width: 100%;
+        }
+        
+        #ofertas {
+            article {
+                border: 2px solid white;
+                width: 80%;
+                height: 50vh;
+                border-radius: 10px;
+                backdrop-filter: blur(500px);
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h4 {
+                    -webkit-text-fill-color: white;
+                    font-size: 2.5rem!important;
+                }
+
+                span.hs {
+                    padding-left: 19px;
+                }
+
+
+              
+                img {
+                    width: 140px;
+                    position: absolute;
+                    transform: translate(-140px, 87px);
+                    -webkit-text-fill-color: transparent;
+                    background: linear-gradient(20deg, #A12626, #550BEC);
+                    -webkit-background-clip: text;
+                    -webkit-space: nowrap;
+                }
+            }
+            
+        }
+            
+    }
+
+    div#redes {
+        width: 100%;
+    }
+  
+    .col-md-4{
+        width: 100%;
+        margin-top: 70px;
+    }
+    footer {
+       
+        box-shadow: 0 -21px 25px #00000026;
+        padding: 15px 0px 0px 40px;
+    }
+
+ }
