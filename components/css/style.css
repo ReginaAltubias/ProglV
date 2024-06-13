@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6{
     background: linear-gradient(20deg, #A12626, #550BEC);
     -webkit-background-clip: text;
     -webkit-space:nowrap;
+    background-clip: text;
 }
 
 /*====================navabar=================*/
@@ -116,6 +117,7 @@ header{
         -webkit-background-clip: text;
         -webkit-space:nowrap;
         font-size: 2.1rem;
+        background-clip: text;
     }
 
     .cont-icon {
@@ -123,12 +125,12 @@ header{
         position: absolute;
         background-color: white;
         color: black;
-        right: 120px;
+        right: 148px;
         text-align: center;
         width: 30px;
         height: 30px;
         line-height: 30px;
-        transform: translateY(24px);
+        transform: translateY(28px);
     }
 
     button.btn:hover, button.btn:focus{
@@ -474,6 +476,7 @@ section#promocoes {
                 background: linear-gradient(20deg, #A12626, #550BEC);
                 -webkit-background-clip: text;
                 -webkit-space:nowrap;
+                background-clip: text;
             }
         }
     }
@@ -609,6 +612,7 @@ section#CONTACTOS_FOOTER{
                     -webkit-space:nowrap;
                     font-size: 1.5rem;
                     transition: .2s;
+                    background-clip: text;
                 }
 
 
@@ -669,6 +673,7 @@ footer {
         -webkit-background-clip: text;
         -webkit-space:nowrap;
         margin: 0px 9px;
+        background-clip: text;
     }
 }
 
@@ -827,6 +832,7 @@ footer {
                     background: linear-gradient(20deg, #A12626, #550BEC);
                     -webkit-background-clip: text;
                     -webkit-space: nowrap;
+                    background-clip: text;
                 }
             }
             
@@ -939,7 +945,7 @@ footer {
 
 
     .cont-icon {
-        right: 100px!important;
+        right: 220px !important;
         width: 25px!important;
         height: 25px!important;
         line-height: 25px!important;
@@ -1006,6 +1012,7 @@ footer {
                     background: linear-gradient(20deg, #A12626, #550BEC);
                     -webkit-background-clip: text;
                     -webkit-space: nowrap;
+                    background-clip: text;
                 }
             }
             
