@@ -141,3 +141,16 @@ function displaycart(a){
             }).join('');
     }
 }
+
+
+
+//Menu Toogle from phone and tablet
+
+
+const toggleBtn =document.querySelector('.toogle-btn')
+const toggleIcon =document.querySelector('.toogle-btn i')
+const navbarDropdow =document.querySelector('#navbar-dropdow')
+
+toggleBtn.onclick = function(){
+    navbarDropdow.classList.toggle('open')
+}

@@ -22,7 +22,9 @@
                   <div class="logo   col-md-2">
                     <h1 style=" font-size: 2.5rem;">Tennis <br> <img src="./components/img/le1.png" alt="" id="logo"> Stor</h1>
                   </div>
-        
+                  
+
+                  
                   <!--==============navbar==========-->
                     <nav id="navbar" class="navbar ">
                       <ul>
@@ -32,7 +34,7 @@
                         <li><a class="nav-link " href="#ofertas">Ofertas</a></li>
                         <li><a class="nav-link " href="#contactos">Contactos</a></li>
                       </ul>
-                      <a href="login.html"><button type="submit" class="btn">Entrar</button></a>
+                      <a href="./auto-pages/login.html"><button type="submit" class="btn">Entrar</button></a>
                     </nav><!--========navbar==========-->
                     <div class="carrinho" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" >
                       <i class="bi-cart3"></i>
@@ -58,10 +60,10 @@
             <div class="row">
                 <div class="col-md-12">
                   <div class="wrapper">
-                    <h1 class="content">
+                    <h1 class="content display-4">
                       Bem-vindo à Sua Loja de Tênis
                       <div class="container" id="text-animacao">
-                        voce <span></span>
+                        <span></span>
                       </div>
                     </h1>
                   </div>
@@ -71,9 +73,9 @@
         </div>
         <!--==============SOBRE==========-->
         <section class="container-fluid" id="sobre">
-          <h1 class="mb-4 mt-md-5">Sobre nós</h1>
-          <div class="row gap-2">
-            <div class="text col-md-9">
+          <h1 class="mb-4 mt-md-5 text-center">Sobre nós</h1>
+          <div class="row gap-2 justify-content-center d-flex">
+            <div class="text col-md-9 text-center">
               <span class="">
                 <p>Na nossa loja, você encontra o que há de melhor em tecnologia, design e conforto para os seus pés. Somos especializados em tênis das marcas 
                   Adidas e Nike, líderes mundiais em inovação e estilo. Nosso objetivo é proporcionar a melhor experiência de compra online, oferecendo uma 
@@ -82,7 +84,7 @@
             </div>
             <div class="d-flex justify-content-center flex-column align-items-md-center gap-5">
               <h5>Por que Escolher Nossa Loja?</h5>
-              <div class="row d-flex gap-3">
+              <div class="row d-flex justify-content-center gap-3">
                 <div class="card" >
                   <div class="card-inner">
                     <div class="card-front">
@@ -240,7 +242,7 @@
 
         <section class="CONTACTOS_FOOTER px-5" id="CONTACTOS_FOOTER">
           <div class="row row-cols-md-3">
-              <div class="col-md-4" id="redes">
+              <div class="col-md-4 mb-5 mb-md-0" id="redes">
                 <div class="logo">
                   <h1 style=" font-size: 2.5rem;">Tennis <br> <img src="./components/img/le1.png" alt="" id="logo"> Stor</h1>
                 </div>
@@ -250,15 +252,30 @@
                 </article>
                 <div class="social-midea">
                   <ul>
-                    <a href="#"><li></li></a>
-                    <a href="#"><li></li></a>
-                    <a href="#"><li></li></a>
+                    <a href="#">
+                      <li style="--cor1:#09c5ff; --cor2:#0986ff;">
+                        <span class="icon"><i class="bi bi-facebook"></i></span>
+                        <span class="text">Facebook</span>
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li style="--cor1:green; --cor2:#4caf50bf;">
+                        <span class="icon"><i class="bi bi-whatsapp"></i></span>
+                        <span class="text">Whatsapp</span>
+                      </li>
+                    </a>
+                    <a href="#">
+                      <li style="--cor1:#0d1e7a; --cor2:#137ccf;">
+                        <span class="icon"><i class="bi bi-linkedin"></i></span>
+                        <span class="text">Linkedin</span>
+                      </li>
+                    </a>
                   </ul>
                 </div>
               </div>
 
 
-              <div class="col-md-4">
+              <div class="col-md-4  mb-5 mb-md-0">
                 <div class=" row dados">
                   <div class="col-md-6">
                     <span class="d-inline-flex gap-4">
@@ -318,10 +335,21 @@
                     <input type="text" class="form-control" placeholder="Assunto">
                     <textarea name="mensagem" id="" class="form-control" placeholder="Mensagem"></textarea>
                   </div>
+
+                  <div class="text-center mt-4">
+                    <button class="btn" type="submit">Enviar</button>
+                  </div>
                 </form>
               </div>
           </div>
         </section>
+
+        <footer class="container-fluid">
+          <div class="">
+            <small class="d-flex">© Copyright   <p>Tennis Stor</p>. All Rights Reserved</small>
+            <small class="d-flex">Designed by   <p>RG-Altubias</p></small>
+          </div>
+        </footer>
       </div>
     </section>
     <!--=================Link css===================-->

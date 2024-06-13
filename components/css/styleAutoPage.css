@@ -133,6 +133,11 @@ div#login {
             position: relative;
             cursor: pointer;
         }
+
+        div.button a{
+            padding: 0!important;
+            position: relative;
+        }
     }
 
 }
